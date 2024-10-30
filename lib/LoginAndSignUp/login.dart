@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:new_practice_project/LoginAndSignUp/signUp.dart';
+import 'package:new_practice_project/screens/home.dart';
+
+import '../Widgets/alertDialog.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -11,6 +14,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
 
   bool isChecked = false;
+
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +28,7 @@ class _LoginPageState extends State<LoginPage> {
             left: 0,
             right: 0,
             child: Image.asset(
-              'assets/images/LoginAndSignUp/Vector 1.png',  // Top image
+              'assets/images/Vector 1.png',  // Top image
               fit: BoxFit.cover,
               height: 200,
               color: Colors.red.shade50,
@@ -38,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
             left: 0,
             right: 0,
             child: Image.asset(
-              'assets/images/LoginAndSignUp/Vector 2.png',  // Bottom image
+              'assets/images/Vector 2.png',  // Bottom image
               fit: BoxFit.cover,  // Keep image as it is
               height: 120,
               color: Colors.red.shade50,// Adjust height of the bottom image
@@ -53,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Align(
               alignment: Alignment.center,  // Center the logo
               child: Image.asset(
-                'assets/images/LoginAndSignUp/Logo.png',  // Logo image
+                'assets/images/Logo.png',  // Logo image
                 height: 100,  // Adjust the size of the logo
               ),
             ),
@@ -174,12 +178,13 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       TextButton(
                         onPressed: () {
+                          myAlertDialog(context);
 
                         },
-                        child: Text(
+                        child: const Text(
                           'Forgot password?',
                           style: TextStyle(
-                              color: Colors.deepOrange.shade400,
+                              color:Color(0xffFF6F37),
                               fontWeight:FontWeight.w400,
                               fontSize: 16,
                             fontFamily: "Nunito",
@@ -196,13 +201,13 @@ class _LoginPageState extends State<LoginPage> {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
-                        // Handle log in action
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const HomeScreen()));
                       },
                       style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 15),
-                        backgroundColor: Colors.deepOrange.shade400,  // Orange button color
+                        backgroundColor: const Color(0xffFF6F37),  // Orange button color
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(4),
                         ),
                       ),
                       child: const Text(
@@ -241,7 +246,7 @@ class _LoginPageState extends State<LoginPage> {
                           textAlign: TextAlign.center,
                           'Create account',
                           style: TextStyle(
-                              color: Colors.deepOrange,  // Keep orange color for link
+                              color: Color(0xffFF6F37),  // Keep orange color for link
                               fontWeight:FontWeight.w400,
                               fontSize: 16,
                             fontFamily: "Nunito",
@@ -259,3 +264,5 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+
+

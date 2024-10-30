@@ -5,6 +5,8 @@ import 'dart:async';
 // For the delayed transition
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -54,14 +56,14 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
         fit: StackFit.expand,
         children: [
           Image.asset(
-            'assets/images/splash/bg.png',
+            'assets/images/spalshBg.png',
             fit: BoxFit.cover,
           ),
           Center(
             child: SlideTransition(
               position: _animation,
               child: Image.asset(
-                'assets/images/splash/Icon.png',
+                'assets/images/Icon.png',
                 width: 150,
                 height: 150,
               ),

@@ -1,0 +1,66 @@
+import 'package:new_practice_project/screens/popularListingInfo.dart';
+
+class PopularListingItems {
+  List<Popularlistinginfo> listingItems = [
+    Popularlistinginfo(
+        images: "assets/images/Bangkok Tour.png",
+        title: "Bangkok Tour",
+        category: "Category: Travel Agency",
+        icon: "assets/images/Location.png",
+        location: "Lahor, Pakistan",
+      rateText: "4.5",
+      iconTwo: "assets/images/Star.png",
+      iconThree: "assets/images/bottomsheet2.png",
+    ),
+    Popularlistinginfo(
+      images: "assets/images/Fito Fitness & Gym.png",
+      title: "Fito Fitness & Gym",
+      category: "Category: Gym",
+      icon: "assets/images/Location.png",
+      location: "Washington, USA",
+      rateText: "4.5",
+      iconTwo: "assets/images/Star.png",
+      iconThree: "assets/images/bottomsheet2.png",
+    ),
+    Popularlistinginfo(
+      images: "assets/images/Woman fashion....png",
+      title: "Woman fashion...",
+      category: "Category: Shopping",
+      icon: "assets/images/Location.png",
+      location: "Lahor, Pakistan",
+      rateText: "4.5",
+      iconTwo: "assets/images/Star.png",
+      iconThree: "assets/images/bottomsheet2.png",
+    ),
+    Popularlistinginfo(
+      images: "assets/images/Rendering isometric...png",
+      title: "Rendering isometric..",
+      category: "Category: Real Estate",
+      icon: "assets/images/Location.png",
+      location: "San Francisco",
+      rateText: "4.5",
+      iconTwo: "assets/images/Star.png",
+      iconThree: "assets/images/bottomsheet2.png",
+    ),
+    Popularlistinginfo(
+      images: "assets/images/Online Class....png",
+      title: "Online Class...",
+      category: "Category: Education",
+      icon: "assets/images/Location.png",
+      location: "Lahor, Pakistan",
+      rateText: "4.5",
+      iconTwo: "assets/images/Star.png",
+      iconThree: "assets/images/bottomsheet2.png",
+    ),
+    Popularlistinginfo(
+      images: "assets/images/Modern styled....png",
+      title: "Modern styled...",
+      category: "Category: Travel Agency",
+      icon: "assets/images/Location.png",
+      location: "Lahor, Pakistan",
+      rateText: "4.5",
+      iconTwo: "assets/images/Star.png",
+      iconThree: "assets/images/bottomsheet2.png",
+    ),
+  ];
+}

@@ -20,7 +20,7 @@ class _SignUpPageState extends State<SignUpPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
-        child: Container(
+        child: SizedBox(
           height: MediaQuery.sizeOf(context).height,
           width: MediaQuery.sizeOf(context).width,
           child: Stack(
@@ -32,7 +32,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 left: 0,
                 right: 0,
                 child: Image.asset(
-                  'assets/images/LoginAndSignUp/Vector 1.png',  // Top image
+                  'assets/images/Vector 1.png',  // Top image
                   fit: BoxFit.fill,
                   height: 200,
                   color: Colors.red.shade50,
@@ -47,22 +47,21 @@ class _SignUpPageState extends State<SignUpPage> {
                 left: 0,
                 right: 0,
                 child: Image.asset(
-                  'assets/images/LoginAndSignUp/Vector 2.png',  // Bottom image
-                  fit: BoxFit.cover,  // Keep image as it is
-                  height: 100,
+                  'assets/images/Vector 2.png',  // Bottom image
+                  fit: BoxFit.fill,  // Keep image as it is
+                  height: 65,
                   color: Colors.red.shade50,// Adjust height of the bottom image
                 ),
               ),
 
-              // Center the logo in the middle of the Vector 1 background image
               Positioned(
-                top: 50,  // Adjust this value to place the logo exactly in the center of Vector 1
+                top: 50,
                 left: 0,
                 right: 0,
                 child: Align(
                   alignment: Alignment.center,  // Center the logo
                   child: Image.asset(
-                    'assets/images/LoginAndSignUp/Logo.png',  // Logo image
+                    'assets/images/Logo.png',  // Logo image
                     height: 100,  // Adjust the size of the logo
                   ),
                 ),
@@ -112,8 +111,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       // Username TextField with icon and underline only
                       const Row(
                         children: [
-                          Icon(Icons.person_outline, color: Colors.black26),
-                          SizedBox(width: 10 ,),
+
                           Expanded(
                             child: TextField(
                               decoration: InputDecoration(
@@ -124,7 +122,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400,
                                 ),
-
+                                prefixIcon: Icon(Icons.person_outline, color: Colors.black26),
                                 border: InputBorder.none, // Remove all borders
                                 enabledBorder: UnderlineInputBorder( // Show underline when not focused
                                   borderSide: BorderSide(color: Colors.black12),
@@ -140,24 +138,31 @@ class _SignUpPageState extends State<SignUpPage> {
                       const SizedBox(height: 20),
 
                       // Email Address TextField
-                      const TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Email Address',
-                          hintStyle: TextStyle(
-                            fontFamily: "Nunito",
-                            color: Colors.black26,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
+                      const Row(
+                        children: [
+
+                          Expanded(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                hintText: 'Email Address',
+                                hintStyle: TextStyle(
+                                  fontFamily: "Nunito",
+                                  color: Colors.black26,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                                prefixIcon: Icon(Icons.email_outlined, color: Colors.black26),
+                                border: InputBorder.none,
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black12),
+                                ),
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.deepOrange),
+                                ),
+                              ),
+                            ),
                           ),
-                          prefixIcon: Icon(Icons.email, color: Colors.black26),
-                          border: InputBorder.none,
-                          enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black12),
-                          ),
-                          focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.deepOrange),
-                          ),
-                        ),
+                        ],
                       ),
                       const SizedBox(height: 20),
 
@@ -233,7 +238,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
                           ),
-                          prefixIcon: Icon(Icons.lock, color: Colors.black26),
+                          prefixIcon: Icon(Icons.lock_outline, color: Colors.black26),
                           border: InputBorder.none,
                           enabledBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.black12),
@@ -276,9 +281,10 @@ class _SignUpPageState extends State<SignUpPage> {
                         width: double.infinity,
                         child: ElevatedButton(
                           onPressed: () {
-                            // Handle log in action
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const LoginPage()));
                           },
                           style: ElevatedButton.styleFrom(
+
                             padding: const EdgeInsets.symmetric(vertical: 12),
                             backgroundColor: Colors.deepOrange.shade400, // Orange button color
                             shape: RoundedRectangleBorder(
@@ -311,7 +317,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
                           TextButton(
                             onPressed: () {
-                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginPage()));
+                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const LoginPage()));
                               // Navigate to create account page
                             },
                             child: const Text(

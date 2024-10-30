@@ -32,6 +32,9 @@ dependencies:
     sdk: flutter
   smooth_page_indicator: ^1.2.0+3
   intl_phone_number_input: ^0.7.0
+  emerge_alert_dialog: ^0.0.3
+  font_awesome_flutter: ^10.7.0
+  standard_searchbar: ^2.0.0
 
 
 
@@ -64,15 +67,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - assets/images/splash/bg.png
-     - assets/images/splash/Icon.png
-     - assets/images/onboarding/Image.png
-     - assets/images/onboarding/Image1.png
-     - assets/images/onboarding/Image2.png
-     - assets/images/LoginAndSignUp/loginBg.png
-     - assets/images/LoginAndSignUp/Logo.png
-     - assets/images/LoginAndSignUp/Vector 1.png
-     - assets/images/LoginAndSignUp/Vector 2.png
+     - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

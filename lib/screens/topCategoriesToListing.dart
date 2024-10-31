@@ -126,11 +126,10 @@ Padding topCategoriesList() {
               
               onTap: (){},
               child: CircleAvatar(
-                child: Image.asset(
-                  "assets/images/Hotel.png", width: 24, height: 24,),
-              
                 radius: 30,
                 backgroundColor: const Color(0xffFFEDEB),
+                child: Image.asset(
+                  "assets/images/Hotel.png", width: 24, height: 24,),
               
               ),
             ),
@@ -152,10 +151,10 @@ Padding topCategoriesList() {
               
               onTap: (){},
               child: CircleAvatar(
-                child: Image.asset(
-                  "assets/images/Shop.png", width: 24, height: 24,),
                 radius: 30,
                 backgroundColor: const Color(0xffFFEDEB),
+                child: Image.asset(
+                  "assets/images/Shop.png", width: 24, height: 24,),
               ),
             ),
             const SizedBox(height: 6,),
@@ -176,12 +175,11 @@ Padding topCategoriesList() {
               
               onTap: (){},
               child: CircleAvatar(
+                radius: 30,
+                backgroundColor: const Color(0xffFFEDEB),
                 child: Image.asset(
                   "assets/images/Furniture.png", width: 24,
                   height: 24,),
-              
-                radius: 30,
-                backgroundColor: const Color(0xffFFEDEB),
               ),
             ),
             const SizedBox(height: 6,),
@@ -202,10 +200,10 @@ Padding topCategoriesList() {
               
               onTap: (){},
               child: CircleAvatar(
-                child: Image.asset(
-                  "assets/images/Book.png", width: 24, height: 24,),
                 radius: 30,
                 backgroundColor: const Color(0xffFFEDEB),
+                child: Image.asset(
+                  "assets/images/Book.png", width: 24, height: 24,),
               ),
             ),
             const SizedBox(height: 6,),

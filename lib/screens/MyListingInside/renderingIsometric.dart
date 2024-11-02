@@ -32,7 +32,7 @@ class _RenderingIsometricState extends State<RenderingIsometric> {
         margin: const EdgeInsets.symmetric(horizontal: 0,),
         child: Stack(
           children: [
-            Container(
+            SizedBox(
               width: 430,
               height: 342,
               child: PageView.builder(
@@ -111,7 +111,7 @@ class _RenderingIsometricState extends State<RenderingIsometric> {
                   ),
                   child: Transform.scale(
                     scale: 0.8,
-                    child: Icon(Icons.arrow_back, color: Colors.white,)
+                    child: const Icon(Icons.arrow_back, color: Colors.white,)
                   ),
                 ),
               ),
@@ -135,7 +135,7 @@ class _RenderingIsometricState extends State<RenderingIsometric> {
                   ),
                   child: Transform.scale(
                     scale: 0.8,
-                    child: Icon(Icons.share, color: Colors.white,)
+                    child: const Icon(Icons.share, color: Colors.white,)
                   ),
                 ),
               ),

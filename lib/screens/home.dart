@@ -215,7 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   shrinkWrap: true,
                   primary: false,
                   itemCount: PopularListingItems().listingItems.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                         childAspectRatio: 4/5,
                     ),
@@ -229,7 +229,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [
                             Container(
                              decoration: BoxDecoration(
-                              color: Color(0xffFFF8F7) ,
+                              color: const Color(0xffFFF8F7) ,
                               borderRadius: BorderRadius.circular(4),
                              ),
                             
@@ -278,10 +278,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                                   children: [
                                                     Image.asset(PopularListingItems().listingItems[index].iconTwo,
-                                                    color: Color(0xffFFC107),
+                                                    color: const Color(0xffFFC107),
                                                     ),
                                                     Text(PopularListingItems().listingItems[index].rateText,
-                                                    style: TextStyle(
+                                                    style: const TextStyle(
                                                       fontFamily: "Nutino",
                                                       fontSize: 14,
                                                       fontWeight: FontWeight.w500,
@@ -303,7 +303,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               height: 0,
                                               width: 0,
                                               decoration: BoxDecoration(
-                                                color: Color(0xffFF6F37),
+                                                color: const Color(0xffFF6F37),
                                                 borderRadius: BorderRadius.circular(30),
                                               ),
                                               child: Transform.scale(
@@ -347,7 +347,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         Row(
                                           children: [
                                             Image.asset(PopularListingItems().listingItems[index].icon),
-                                            SizedBox(width: 8,),
+                                            const SizedBox(width: 8,),
                                             Text(PopularListingItems().listingItems[index].location,
                                         style: const TextStyle(
                                           fontFamily: "Nunito",
